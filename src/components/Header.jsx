@@ -1,16 +1,17 @@
-import React, { Component, createRef } from "react";
+import React, { Component} from "react";
 import { Link } from "react-router-dom";
 import { Icon } from "react-icons-kit";
-import { home } from "react-icons-kit/icomoon/home";
+import { paw } from 'react-icons-kit/fa/paw'
+
+
 
 class Header extends Component {
   render() {
     return (
       <div>
-        <nav className="navWrapper">
+        <nav  className="navWrapper">
           <Link className="iconLink" to="/">
-            {""}
-            <Icon className="iconButton" size={60} icon={home} />
+            <Icon className="iconButton" size={45} icon={paw} />
           </Link>
         </nav>
       </div>

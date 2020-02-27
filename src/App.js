@@ -10,11 +10,17 @@ import Pets from "./components/Pets";
 import NewPet from "./components/NewPet";
 import FindPet from "./components/FindPet";
 import AnimalDetail from "./components/AnimalDetail";
+import Organizations from "./components/Organizations";
+import { Icon } from "react-icons-kit";
+import { androidMail } from "react-icons-kit/ionicons/androidMail";
+import { ic_phone } from "react-icons-kit/md/ic_phone";
+import Footer from "./components/Footer";
 
 class App extends Component {
   state = {
     pets: [],
-    petTypes: []
+    org: [],
+    ready: false
   };
   // to get axios
   async componentDidMount() {
@@ -30,48 +36,70 @@ class App extends Component {
       }
     });
     console.log(data.data);
-    let petTypes = await axios.get("https://api.petfinder.com/v2/types", {
-      headers: {
-        Authorization: `Bearer ${authToken.access_token}`
-      }
+    this.setState({
+      pets: data.data.animals,
+      org: data.data.animals,
+      ready: true
     });
-
-    console.log(petTypes);
-
-    this.setState({ pets: data.data.animals, petTypes: petTypes.data.types });
   }
   showPets = () => {
     return this.state.pets.map(eachPet => {
-      return (
-        <div key={eachPet.id}>
-          <Link to={`/pet-details/${eachPet.id}`}>
-            <ul>Name: {eachPet.name}</ul>
-          </Link>
-          <h4>Type: {eachPet.type}</h4>
-
-          <h5>Gender:{eachPet.gender}</h5>
-          <h5>Organization ID: {eachPet.organization_id}</h5>
-          <img style={{ width: "100px" }} src={eachPet.photos} alt="pet" />
-        </div>
-      );
+      console.log(eachPet.photos);
+      if (eachPet.photos[0]) {
+        return (
+          <div className="allPets">
+            <ul className="echPetUl" key={eachPet.id}>
+              <img
+                className="echPetImg"
+                style={{ width: "200px" }}
+                src={eachPet.photos[0].full}
+                alt="pet"
+              />
+              <div className="card-body">
+                <ul>Name: {eachPet.name}</ul>
+                <ul>Id: {eachPet.id}</ul>
+                <ul>Type: {eachPet.type}</ul>
+                <ul>Breed: {eachPet.breeds.primary}</ul>
+                <ul>Gender: {eachPet.gender}</ul>
+                <ul>
+                  <span className="spanP" style={{ background: "linen" }}>
+                    Ask About Me
+                  </span>
+                </ul>
+                <ul>
+                  <Icon className="iconMail" size={25} icon={androidMail} />
+                  {eachPet.contact.email}
+                </ul>
+                <ul>
+                  <Icon className="iconPhone" size={25} icon={ic_phone} />
+                  {eachPet.contact.phone}
+                </ul>
+              </div>
+            </ul>
+          </div>
+        );
+      }
     });
   };
-  showPetType = () => {
-    return this.state.petTypes.map(eachPetType => {
-      return (
-        <div key={eachPetType.id}>
-          <Link to={`/pet-details/${eachPetType.id}`}>
-            <ul>Name: {eachPetType.name}</ul>
-          </Link>
-          <h4>Type: {eachPetType.type}</h4>
 
-          <h5>Gender:{eachPetType.gender}</h5>
-          <h5>Organization ID: {eachPetType.organization_id}</h5>
-          <img
-            style={{ width: "100px" }}
-            src={eachPetType.photos}
-            alt="petType"
-          />
+  showOrganization = () => {
+    console.log(this.state);
+    return this.state.org.map((eachOrg, index) => {
+      //console.log(eachOrg.organization_id)
+      return (
+        <div className="card-org" key={index}>
+          <ul key={eachOrg.organization_id}>
+            {/* <Link to={`/organizations/${eachOrg.organization_id}`}></Link> */}
+            <ul>Organization Id: {eachOrg.organization_id}</ul>
+            <ul> Email: {eachOrg.contact.email}</ul>
+            <ul>Phone: {eachOrg.contact.phone}</ul>
+            <ul>Address: {eachOrg.contact.address.address1}</ul>
+            <ul>City: {eachOrg.contact.address.city}</ul>
+            <ul>
+              State: {eachOrg.contact.address.state}, Post Code:
+              {eachOrg.contact.address.postcode}
+            </ul>
+          </ul>
         </div>
       );
     });
@@ -83,24 +111,35 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path="/" render={props => <HomePage {...props} />} />
-
           <Route
             exact
             path="/pets"
-            render={props => <Pets {...props} showMePets={this.showPets}  showMePetType={this.showPetType}  />}
+            render={props => <Pets {...props} showMePets={this.showPets} />}
           />
-          <Route exact path="/find" render={props => <FindPet {...props} />} />
           <Route
             exact
-            path="/new-pet"
-            render={props => <NewPet {...props} />}
+            path="/find"
+            render={props => <FindPet showMeFindPet={this.showFindPet} />}
           />
+          <Route exact path="/new" render={props => <NewPet {...props} />} />
           <Route
             exact
             path="/pet-details/:petId"
             render={props => <AnimalDetail {...props} />}
           ></Route>
+          <Route
+            exact
+            path="/organizations"
+            render={props => (
+              <Organizations
+                {...props}
+                showMeOrganization={this.showOrganization}
+                ready={this.state.ready}
+              />
+            )}
+          ></Route>
         </Switch>
+        <Footer/>
       </div>
     );
   }

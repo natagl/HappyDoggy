@@ -22,7 +22,7 @@ class AnimalDetail extends Component {
     this.setState({
       pet1: singlePet.data.animal,
       ready: true
-    }); ///to receive single pet info
+    }); 
   }
 
   render() {
@@ -30,16 +30,6 @@ class AnimalDetail extends Component {
       <div>
         {this.state.ready ? (
           <li>
-            {/* {this.state.pet1.name}
-            <br />
-            {this.state.pet1.id}
-            <br />
-            {this.state.pet1.age}
-            <br />
-            {this.state.pet1.gender}
-            <br />
-            {this.state.pet1.size}
-            <br /> */}
           </li>
         ) : (
           "Loading"

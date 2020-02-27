@@ -1,33 +1,15 @@
-@media (prefers-reduced-motion: no-preference) {
-}
-
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 nav {
-  background-color: paleturquoise;
-  height: 75px;
+  background-color: linen;
+  height: 50px;
 }
 
 .navWrapper > a {
   display: flex;
   flex-direction: column;
-}
-
-.iconButton {
-  margin-top: 10px;
-  color: linen;
-  align-self: center;
 }
 
 .petDiv {
@@ -37,11 +19,31 @@ nav {
 a {
   text-decoration: none;
 }
+.iconButton {
+  color: burlywood;
+  align-self: center;
+}
 
+.iconButton1 {
+  margin-top: 10px;
+  color: burlywood;
+  /* align-self: center; */
+}
 .iconButton3 {
   margin-top: 10px;
-  color: linen;
-  align-self: center;
+  color: burlywood;
+  /* align-self: center; */
+}
+.iconButton4 {
+  margin-top: 10px;
+  color: burlywood;
+  /* align-self: center; */
+}
+.iconMail {
+  color: burlywood;
+}
+.iconPhone {
+  color: burlywood;
 }
 
 .findDiv {
@@ -51,4 +53,108 @@ a {
 .petdetailsDiv {
   text-align: center;
 }
+.donateDiv {
+  text-align: center;
+}
+.inputBox {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  font-size: small;
+  font-weight: bold;
+}
+.inputButton {
+  background-color: burlywood;
+  box-shadow: 0 0 8px 2px burlywood;
+  text-shadow: 0 0 1px burlywoode;
+  font-style: italic;
+  shape-image-threshold: inherit;
+}
 
+.allPets {
+  text-align: center;
+  border: inset 1px burlywood;
+}
+
+.iconButton5 {
+  color: burlywood;
+}
+
+.oragizationsDiv {
+  text-align: center;
+}
+
+.echPetImg {
+  width: 500px;
+  height: 250px;
+  /* border: 1px solid lightgrey; */
+}
+
+.images {
+  margin-left: 50px;
+  width: 600px;
+  height: 500px;
+  border: 1px solid linen;
+  font-family: monospace;
+  font-style: italic;
+}
+.box-text {
+  text-align: center;
+}
+.shareText {
+  /* border: 0.5px solid lightgrey; */
+}
+
+.socialButtons {
+  /* position: relative; */
+}
+
+.socialDiv {
+  position: absolute;
+}
+
+.pics {
+  width: 300px;
+  height: 500px;
+}
+
+.carousel .thumbs {
+  display: none;
+}
+.carousel-caption.d-none.d-md-block {
+  background-color: linen;
+}
+.carousel .slide {
+  background: rgba(255, 255, 255, 0) !important;
+}
+.all-pets {
+  display: flex;
+}
+.findPetRender {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.findImg {
+  margin-right: 50px;
+}
+
+.carousel-status {
+  display: none !important;
+}
+.card-org {
+  margin-left: 400px;
+  background-color: whitesmoke;
+  width: 400px;
+  height: 150px;
+  border: 1px solid linen;
+  font-family: monospace;
+  font-style: italic;
+  display: flex;
+  align-content: space-between;
+}
+.footerIcon {
+  display: flex;
+  justify-content: space-around;
+}
