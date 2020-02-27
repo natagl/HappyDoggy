@@ -44,7 +44,6 @@ class FindPet extends Component {
                   <TwitterIcon size={30} round={true} />
                 </TwitterShareButton>
               </ul>
-              <br />
             </div>
           </ul>
         </div>

@@ -31,22 +31,20 @@ class NewPet extends Component {
                     Name
             <br />
                     <input type="text" name="name" onChange={this.handleOnTyping} />
-
                     <br />
                     Species
                     <br />
                     <input type="text" name="type" onChange={this.handleOnTyping} />
                     <br />
                     Type
-            <br />
+                     <br />
                     <input
                         type="text"
                         name="species"
-                        onChange={this.handleOnTyping}
-                    />
+                        onChange={this.handleOnTyping} />
                     <br />
                     Age
-            <br />
+                   <br />
                     <input
                         type="number"
                         name="age"
@@ -54,7 +52,7 @@ class NewPet extends Component {
                     />
                     <br />
                     Color
-            <br />
+                     <br />
                     <input
                         type="text"
                         name="color"
@@ -62,7 +60,7 @@ class NewPet extends Component {
                     />
                     <br />
                     Description
-            <br />
+                     <br />
                     <input
                         type="text"
                         name="description"
@@ -76,7 +74,7 @@ class NewPet extends Component {
                         type="text"
                         name="description"
                         onChange={this.handleOnTyping} />
-
+                    <br />
                     <br />
                     <input type="submit" name="contactInformation" className="inputButton" />
 

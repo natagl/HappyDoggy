@@ -1,7 +1,7 @@
-.App-link {
-  color: #61dafb;
+* {
+  margin: 0;
+  padding: 0;
 }
-
 nav {
   background-color: linen;
   height: 50px;
@@ -27,17 +27,14 @@ a {
 .iconButton1 {
   margin-top: 10px;
   color: burlywood;
-  /* align-self: center; */
 }
 .iconButton3 {
   margin-top: 10px;
   color: burlywood;
-  /* align-self: center; */
 }
 .iconButton4 {
   margin-top: 10px;
   color: burlywood;
-  /* align-self: center; */
 }
 .iconMail {
   color: burlywood;
@@ -57,24 +54,49 @@ a {
   text-align: center;
 }
 .inputBox {
+  height: 450px;
   align-items: center;
   display: flex;
   flex-direction: column;
   font-style: italic;
   font-size: small;
   font-weight: bold;
+
+  background-color: whitesmoke;
 }
 .inputButton {
   background-color: burlywood;
-  box-shadow: 0 0 8px 2px burlywood;
-  text-shadow: 0 0 1px burlywoode;
+  color: linen;
+  padding: 20px;
+  margin-bottom: 10px;
+  text-align: center;
   font-style: italic;
-  shape-image-threshold: inherit;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
 }
 
-.allPets {
+.eachPets {
+  margin-top: 10px;
   text-align: center;
-  border: inset 1px burlywood;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px navajowhite;
+  box-shadow: inset 0 0 3px 0px darkgoldenrod;
+  margin-top: 10px;
+}
+.all-pets {
+  overflow: visible;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.echPetImg {
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 .iconButton5 {
@@ -88,30 +110,14 @@ a {
 .echPetImg {
   width: 500px;
   height: 250px;
-  /* border: 1px solid lightgrey; */
 }
 
-.images {
-  margin-left: 50px;
-  width: 600px;
-  height: 500px;
-  border: 1px solid linen;
-  font-family: monospace;
-  font-style: italic;
-}
 .box-text {
   text-align: center;
 }
-.shareText {
-  /* border: 0.5px solid lightgrey; */
-}
-
-.socialButtons {
-  /* position: relative; */
-}
 
 .socialDiv {
-  position: absolute;
+  float: center;
 }
 
 .pics {
@@ -137,24 +143,63 @@ a {
   margin-bottom: 20px;
 }
 .findImg {
-  margin-right: 50px;
+  margin-top: 20px;
 }
 
 .carousel-status {
   display: none !important;
 }
 .card-org {
-  margin-left: 400px;
   background-color: whitesmoke;
-  width: 400px;
-  height: 150px;
-  border: 1px solid linen;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card-item {
+  width: 30%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px navajowhite;
+  box-shadow: inset 0 0 3px 0px darkgoldenrod;
+  margin-top: 10px;
+}
+.find-box {
+  width: 350px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: inset 0 0 3px 0px darkgoldenrod;
+  margin-top: 10px;
   font-family: monospace;
   font-style: italic;
+}
+
+.images {
   display: flex;
-  align-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
 }
 .footerIcon {
   display: flex;
   justify-content: space-around;
+}
+
+.StickyFooter {
+  position: fixed;
+  top: 100vh;
+}
+
+form {
+  padding-top: 40px;
+  margin-left: 30px;
+  color: tan;
+}
+
+input {
+  width: 290px;
+  height: 20px;
+  box-shadow: 0 0 4px 2px gray;
+  color: gray;
 }

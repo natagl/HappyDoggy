@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 const Organizations = props => {
     //console.log(props)
     return (
-        <div>
+        <div className="card-org">
             {props.ready ? (props.showMeOrganization()) : ("Loading...")}
         </div>
     );

@@ -47,7 +47,7 @@ class App extends Component {
       console.log(eachPet.photos);
       if (eachPet.photos[0]) {
         return (
-          <div className="allPets">
+          <div className="eachPets">
             <ul className="echPetUl" key={eachPet.id}>
               <img
                 className="echPetImg"
@@ -87,12 +87,12 @@ class App extends Component {
     return this.state.org.map((eachOrg, index) => {
       //console.log(eachOrg.organization_id)
       return (
-        <div className="card-org" key={index}>
+        <div className="card-item" key={index}>
           <ul key={eachOrg.organization_id}>
             {/* <Link to={`/organizations/${eachOrg.organization_id}`}></Link> */}
             <ul>Organization Id: {eachOrg.organization_id}</ul>
-            <ul> Email: {eachOrg.contact.email}</ul>
-            <ul>Phone: {eachOrg.contact.phone}</ul>
+            {eachOrg.contact.email && <ul> Email: {eachOrg.contact.email}</ul>}
+            {eachOrg.contact.phone && <ul>Phone: {eachOrg.contact.phone}</ul>}
             <ul>Address: {eachOrg.contact.address.address1}</ul>
             <ul>City: {eachOrg.contact.address.city}</ul>
             <ul>
@@ -139,7 +139,7 @@ class App extends Component {
             )}
           ></Route>
         </Switch>
-        <Footer/>
+        <Footer />
       </div>
     );
   }
