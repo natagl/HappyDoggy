@@ -10,5 +10,5 @@ As an animal lover, anyone can create good karma by doing the right thing and by
 
 My goal for “Happy Doggy” is to find each and every pet the perfect home — with an adopter that thinks of them as their reward for the good they’ve done in their lives.
 
-![alt tag](https://user-images.githubusercontent.com/58815203/75568583-8b8e4980-5a21-11ea-8e1e-2a92c7243d4a.png">)
+![alt tag](<img width="731" alt="2020-02-28 (3)" src="https://user-images.githubusercontent.com/58815203/75568583-8b8e4980-5a21-11ea-8e1e-2a92c7243d4a.png">)
 
