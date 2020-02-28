@@ -19,7 +19,8 @@
 * Dog API - Dog CEO
 
 #### Contact
+```
 Nataliia Glinska - glinska.nataliia21@gmail.com📩
 Project Link : https://happydoggy.netlify.com/
-
+```
 
