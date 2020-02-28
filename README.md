@@ -13,7 +13,7 @@
 * Java Script
 * CSS
 * React
-* Bootsrap
+* Bootstrap
 * Axios
 * PetFinder APIS
 * Dog API - Dog CEO
