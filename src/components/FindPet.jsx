@@ -29,7 +29,7 @@ class FindPet extends Component {
       return (
         <div className="images" key={index} >
           <ul className="find-box">
-            <img className="findImg" style={{ width: "300px" }, { height: "200px" }} src={eachFindPet} alt="pet" />
+            <img className="findImg" src={`/images/newImg/${index}.jpg`} alt="pet" />
             <div className="cardFind-body">
               <ul className="box-text"> <p>I'm looking for this cutie to be mine!
                 If you have some information, please contact me.

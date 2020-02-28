@@ -76,7 +76,7 @@ class NewPet extends Component {
                         onChange={this.handleOnTyping} />
                     <br />
                     <br />
-                    <input type="submit" name="contactInformation" className="inputButton" />
+                    <button type="submit" name="contactInformation" className="inputButton" >Add Pet</button>
 
                 </form>
             </div>

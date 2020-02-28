@@ -14,7 +14,6 @@ import Organizations from "./components/Organizations";
 import { Icon } from "react-icons-kit";
 import { androidMail } from "react-icons-kit/ionicons/androidMail";
 import { ic_phone } from "react-icons-kit/md/ic_phone";
-import Footer from "./components/Footer";
 
 class App extends Component {
   state = {
@@ -62,18 +61,18 @@ class App extends Component {
                 <ul>Breed: {eachPet.breeds.primary}</ul>
                 <ul>Gender: {eachPet.gender}</ul>
                 <ul>
-                  <span className="spanP" style={{ background: "linen" }}>
+                  <span className="spanP">
                     Ask About Me
                   </span>
                 </ul>
-                <ul>
+                {eachPet.contact.email &&<ul>
                   <Icon className="iconMail" size={25} icon={androidMail} />
                   {eachPet.contact.email}
-                </ul>
-                <ul>
+                </ul>}
+                {eachPet.contact.phone && <ul>
                   <Icon className="iconPhone" size={25} icon={ic_phone} />
                   {eachPet.contact.phone}
-                </ul>
+                </ul>}
               </div>
             </ul>
           </div>
@@ -139,7 +138,6 @@ class App extends Component {
             )}
           ></Route>
         </Switch>
-        <Footer />
       </div>
     );
   }
