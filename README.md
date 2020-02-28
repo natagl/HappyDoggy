@@ -1,7 +1,8 @@
 
 My project is a Single Page Application(SAP), written using ReactJs Library.  I used axios as an HTTP client to fetch data via PetFinder APIS. For Design Layout I used Bootstrap(Carousel, Icons, Cards).
 
-https://user-images.githubusercontent.com/58815203/75567450-8defa400-5a1f-11ea-8091-b5319036fd89.png
+![alt tag](https://user-images.githubusercontent.com/58815203/75567450-8defa400-5a1f-11ea-8091-b5319036fd89.png)
+
 
 The main idea of this project is to find homes for Dogs in shelter.
 
